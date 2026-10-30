@@ -1,0 +1,144 @@
+---
+const categories = [
+  {
+    number: '01',
+    name: 'Frontend',
+    description: 'Estructura y desarrollo de interfaces web.',
+    technologies: [
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'TypeScript',
+      'Astro',
+      'Tailwind CSS',
+    ],
+  },
+  {
+    number: '02',
+    name: 'Backend',
+    description: 'Programación y desarrollo del lado del servidor.',
+    technologies: [
+      'Java',
+      'PHP',
+      'Spring Boot',
+    ],
+  },
+  {
+    number: '03',
+    name: 'Bases de datos',
+    description: 'Gestión y consulta de información.',
+    technologies: [
+      'SQL',
+      'PostgreSQL',
+    ],
+  },
+  {
+    number: '04',
+    name: 'Sistemas y herramientas',
+    description: 'Entornos de trabajo y herramientas de desarrollo.',
+    technologies: [
+      'Linux',
+      'Neovim',
+      'tmux',
+      'Git',
+      'GitHub',
+      'Apache',
+    ],
+  },
+  {
+    number: '05',
+    name: 'Cloud computing',
+    description: 'Servicios e infraestructura en la nube.',
+    technologies: [
+      'Microsoft Azure',
+      'AWS',
+    ],
+  },
+];
+
+const learning = [
+  {
+    name: 'React',
+    description: 'Actualmente ampliando conocimientos en desarrollo frontend.',
+  },
+];
+---
+
+<section
+  id="tecnologias"
+  class="mx-auto max-w-6xl px-6 py-24"
+>
+  <div class="mb-12">
+    <p class="font-mono text-sm tracking-widest text-sky-400">
+      02 / TECNOLOGÍAS
+    </p>
+
+    <h2 class="mt-4 text-3xl font-bold md:text-4xl">
+      Herramientas con las que
+      <span class="text-sky-400">trabajo.</span>
+    </h2>
+
+    <p class="mt-4 max-w-2xl leading-relaxed text-slate-400">
+      Tecnologías, lenguajes y herramientas que forman parte
+      de mi aprendizaje y desarrollo de proyectos.
+    </p>
+  </div>
+
+  <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+    {categories.map((category) => (
+      <article
+        class="rounded-xl border border-slate-700 bg-[#10243D] p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-400/60"
+      >
+        <p class="font-mono text-sm text-sky-400">
+          {category.number} / {category.name.toUpperCase()}
+        </p>
+
+        <h3 class="mt-4 text-xl font-semibold text-white">
+          {category.name}
+        </h3>
+
+        <p class="mt-2 text-sm leading-relaxed text-slate-400">
+          {category.description}
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          {category.technologies.map((technology) => (
+            <span class="rounded-md border border-slate-600/70 bg-[#081525] px-3 py-2 text-sm text-slate-200">
+              {technology}
+            </span>
+          ))}
+        </div>
+      </article>
+    ))}
+
+    <article class="rounded-xl border border-sky-400/30 bg-[#10243D] p-6">
+      <p class="font-mono text-sm text-sky-400">
+        06 / EN FORMACIÓN
+      </p>
+
+      <h3 class="mt-4 text-xl font-semibold text-white">
+        Actualmente aprendiendo
+      </h3>
+
+      {learning.map((technology) => (
+        <div class="mt-5 rounded-lg border border-sky-400/20 bg-[#081525] p-4">
+          <div class="flex items-center justify-between gap-3">
+            <span class="font-semibold text-white">
+              {technology.name}
+            </span>
+
+            <span class="rounded-full bg-sky-400/10 px-3 py-1 text-xs text-sky-300">
+              En formación
+            </span>
+          </div>
+
+          <p class="mt-3 text-sm leading-relaxed text-slate-400">
+            {technology.description}
+          </p>
+        </div>
+      ))}
+    </article>
+
+  </div>
+</section>

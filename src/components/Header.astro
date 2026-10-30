@@ -1,0 +1,42 @@
+
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-[#081525]/95 backdrop-blur-md">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+
+    <a href="#inicio" class="text-2xl font-bold tracking-tight text-white">
+      SB<span class="text-sky-400">.</span>
+    </a>
+
+    <!-- Menú escritorio -->
+    <div class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+      <a href="#inicio" class="transition hover:text-sky-400">Inicio</a>
+      <a href="#sobre-mi" class="transition hover:text-sky-400">Sobre mí</a>
+      <a href="#tecnologias" class="transition hover:text-sky-400">Tecnologías</a>
+      <a href="#proyectos" class="transition hover:text-sky-400">Proyectos</a>
+      <a href="#contacto" class="transition hover:text-sky-400">Contacto</a>
+    </div>
+
+    <!-- Botón escritorio -->
+    <a
+      href="#contacto"
+      class="hidden rounded-lg border border-sky-400/40 px-4 py-2 text-sm text-sky-300 transition hover:bg-sky-400 hover:text-[#081525] md:block"
+    >
+      Hablemos
+    </a>
+
+    <!-- Menú móvil -->
+    <details class="relative md:hidden">
+      <summary class="cursor-pointer list-none rounded-lg border border-slate-700 px-4 py-2 text-sm text-sky-300">
+        Menú ☰
+      </summary>
+
+      <div class="absolute right-0 top-14 flex w-56 flex-col gap-4 rounded-xl border border-slate-700 bg-[#10243D] p-5 shadow-xl">
+        <a href="#inicio" class="text-sm text-slate-200 hover:text-sky-400">Inicio</a>
+        <a href="#sobre-mi" class="text-sm text-slate-200 hover:text-sky-400">Sobre mí</a>
+        <a href="#tecnologias" class="text-sm text-slate-200 hover:text-sky-400">Tecnologías</a>
+        <a href="#proyectos" class="text-sm text-slate-200 hover:text-sky-400">Proyectos</a>
+        <a href="#contacto" class="text-sm text-slate-200 hover:text-sky-400">Contacto</a>
+      </div>
+    </details>
+
+  </nav>
+</header>

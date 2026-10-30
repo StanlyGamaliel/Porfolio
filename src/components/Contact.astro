@@ -1,0 +1,75 @@
+
+---
+const contactLinks = [
+  {
+    name: 'Correo electrónico',
+    detail: 'Escríbeme directamente',
+    href: 'mailto:Stanly1590@outlook.es',
+    icon: '01',
+  },
+  {
+    name: 'GitHub',
+    detail: 'Mis repositorios y proyectos',
+    href: 'https://github.com/StanlyGamaliel',
+    icon: '02',
+  },
+  {
+    name: 'LinkedIn',
+    detail: 'Mi perfil profesional',
+    href: 'https://www.linkedin.com/in/stanly-brice%C3%B1o-237237294/',
+    icon: '03',
+  },
+];
+---
+
+<section
+  id="contacto"
+  class="mx-auto max-w-6xl px-6 py-24"
+>
+  <div class="mb-12">
+    <p class="font-mono text-sm tracking-widest text-sky-400">
+      04 / CONTACTO
+    </p>
+
+    <h2 class="mt-4 text-3xl font-bold md:text-4xl">
+      ¿Trabajamos
+      <span class="text-sky-400">juntos?</span>
+    </h2>
+
+    <p class="mt-4 max-w-2xl leading-relaxed text-slate-400">
+      Estoy buscando una oportunidad para realizar mis prácticas
+      y seguir creciendo profesionalmente en el desarrollo web.
+      Si tienes una propuesta o quieres conocer mis proyectos,
+      estaré encantado de contactar contigo.
+    </p>
+  </div>
+
+  <div class="grid gap-4 md:grid-cols-3">
+    {contactLinks.map((link) => (
+      <a
+        href={link.href}
+        target={link.name === 'Correo electrónico' ? undefined : '_blank'}
+        rel="noopener noreferrer"
+        class="group rounded-xl border border-slate-700 bg-[#10243D] p-6 transition duration-300 hover:-translate-y-1 hover:border-sky-400/60"
+      >
+        <div class="flex items-center justify-between">
+          <span class="font-mono text-sm text-sky-400">
+            {link.icon} / CONTACT
+          </span>
+
+          <span class="text-slate-400 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-sky-400">
+            ↗
+          </span>
+        </div>
+
+        <h3 class="mt-8 text-xl font-semibold text-white">
+          {link.name}
+        </h3>
+
+        <p class="mt-2 text-sm text-slate-400">
+          {link.detail}
+        </p>
+      </a>
+    ))}
+  </div>
+</section>
